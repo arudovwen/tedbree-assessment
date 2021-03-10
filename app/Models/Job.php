@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     use HasFactory;
-
+    protected $primaryKey = 'id';
+    public $incrementing = false;
+    
     protected $fillable = ['id', 'title', 'description', 'company', 'company_logo', 'category', 'benefits', 'location', 'work_condition', 'salary', 'type'];
 }
