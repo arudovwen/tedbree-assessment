@@ -39,7 +39,7 @@ class AuthenticatedSessionController extends Controller
         }
 
         $token = $user->createToken('API Token');
-        return ['token' =>  ltrim( $token->plainTextToken, '|')];
+        return ['token' =>   substr( $token->plainTextToken, 2)];
     }
 
     /**
